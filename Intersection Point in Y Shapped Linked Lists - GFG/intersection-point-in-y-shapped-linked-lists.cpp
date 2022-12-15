@@ -114,9 +114,7 @@ int intersectPoint(Node* head1, Node* head2)
     }
     while(d!=0){
         ptr1=ptr1->next;
-        if(ptr1->next==NULL){
-            return -1;
-        }
+        
         d--;
     }
     
