@@ -113,12 +113,14 @@ Node* newNode(int val) {
 */
 int minValue(Node* root) {
     // Code here
-    if(root==NULL){
+    if(root==NULL)
+    {
         return -1;
     }
-    while(root->left!=NULL){
-        root=root->left;
+    if(root->left==NULL)
+    {
+        return root->data;
     }
-    return root->data;
+    minValue(root->left);
     
 }
