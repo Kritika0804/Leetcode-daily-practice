@@ -1,8 +1,7 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-     
-        int arr[256];
+       int arr[256];
         for(int i=0;i<256;i++){
             arr[i]=-1;
         }
@@ -12,8 +11,7 @@ public:
             return 1;
         }
         for(int i=0;i<s.length();i++){
-             cout<<"satrt= "<<start<<endl;
-            cout<<"arr[s[i]= "<<arr[s[i]]<<endl;
+             
             if(arr[s[i]]>start){
                 start=arr[s[i]];
             }
@@ -22,5 +20,7 @@ public:
             mx=max(mx,i-(start));
         }
         return mx;
+        
+        
     }
 };
