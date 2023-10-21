@@ -30,11 +30,10 @@ char* reverse(char *S, int len)
 {
     //code here
     stack<char>st;
-    int i=0;
-    for(;S[i]!='\0';i++){
+    for(int i=0;i<len;i++){
         st.push(S[i]);
     }
-     i=0;
+    int i=0;
     while(!st.empty()){
         S[i]=st.top();
         st.pop();
